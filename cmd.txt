@@ -1,0 +1,3 @@
+docker compose up -d
+docker compose run --rm web sh -c "cd /app/theme/static_src && npm run build"
+docker compose run --rm web sh -c "cd /app/theme/static_src && npm run dev"

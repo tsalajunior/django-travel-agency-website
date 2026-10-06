@@ -43,25 +43,25 @@
             "name": "Paris",
             "country": "France",
             "description": "The city of lights, known for its art, fashion, and culture.",
-            "image_url": "{% static 'images/destinations/Paris.avif' %}"
+            "image_url": "images/destinations/Paris.avif"
         },
         "tokyo": {
             "name": "Tokyo",
             "country": "Japan",
             "description": "A bustling metropolis blending modernity with traditional culture.",
-            "image_url": "{% static 'images/destinations/Tokyo.jpg' %}"
+            "image_url": "images/destinations/Tokyo.jpg"
         },
         "new_york": {
             "name": "New York City",
             "country": "USA",
             "description": "The city that never sleeps, famous for its skyline and cultural diversity.",
-            "image_url": "{% static 'images/destinations/New_York.jpg' %}"
+            "image_url": "images/destinations/New_York_City.jpg"
         },
         "sydney": {
             "name": "Sydney",
             "country": "Australia",
             "description": "Known for its iconic Opera House and beautiful harbor.",
-            "image_url": "{% static 'images/destinations/Sydney.jpg' %}"
+            "image_url": "images/destinations/Sydney.webp"
         }
     }
 }

@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-    <h1>Destinations</h1>
-    <p>Welcome to our destinations page!</p>
+<h1 class="text-3xl font-bold mb-4">Our Destinations</h1>
+<section class="destination-grid" aria-label="Available destinations">
+    {% for destination in destinations %}
+    <div class="card w-full bg-base-100 shadow-sm destination-card">
+        <figure>
+            <img class="h-56 w-full object-cover destination-image" src="{% static destination.image_url %}" alt="{{ destination.name }}" />
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">{{ destination.name }}</h2>
+            <p>{{ destination.description }}</p>
+            <br>
+            <p class="text-2xl font-bold">{{ destination.country }}</p>
+            <div class="card-actions justify-end">
+                <button class="btnBookNow btn btn-primary font-bold">Book Now</button>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No destinations are available right now.</p>
+    {% endfor %}
+</section>
 {% endblock %}

@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main{
+    padding: 1rem 3rem;
+}
+
+.site-header{
+    padding: 0 1rem 1rem;
+    width: auto;
+}
+
+.site-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 4rem;
+}
+
+.site-navbar .navbar-start,
+.site-navbar .navbar-end{
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+}
+
+.site-navbar .navbar-end{
+    justify-content: flex-end;
+}
+
+.site-navbar-links{
+    display: none;
+}
+
+.primary-menu,
+.mobile-menu-links{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-menu{
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.primary-menu a,
+.mobile-menu-links a{
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.mobile-nav-toggle{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-menu-button{
+    cursor: pointer;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.mobile-nav-toggle:checked ~ .mobile-menu{
+    display: block;
+}
+
+.mobile-menu-links{
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.destination-grid{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.destination-card{
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.destination-card figure{
+    margin: 0;
+}
+
+.destination-image{
+    display: block;
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+}
+
+.destination-grid img{
+    object-fit: cover;
+}
+
+.destination-grid img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination-card .card-body{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.destination-card .card-actions{
+    margin-top: auto;
+}
+.destination-card .btnBookNow{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: #f5ca57;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.destination-card .btnBookNow:hover{
+    background-color: transparent;
+    /* color: white; */
+    color: #6f2a1a;
+    scale: 1.05;
+}
+
+footer{
+    background-color: #6f2a1a;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (min-width: 640px){
+    .destination-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px){
+    .mobile-menu-button,
+    .mobile-menu{
+        display: none;
+    }
+
+    .site-navbar-links{
+        display: block;
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 639px){
+    main{
+        padding: 1rem;
+    }
+}

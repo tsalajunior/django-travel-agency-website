@@ -9,4 +9,16 @@ services:
       - .:/app
     command: python manage.py runserver 0.0.0.0:8000
 
+  tailwind:
+    build: .
+    volumes:
+      - .:/app
+      - tailwind_node_modules:/app/theme/static_src/node_modules
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    command: sh -c "cd /app/theme/static_src && npm ci && tail -f /dev/null | npm run dev"
+
+volumes:
+  tailwind_node_modules:
+
   
