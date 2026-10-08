@@ -4,37 +4,37 @@
             "name": "Flight Booking",
             "category": "transportation",
             "description": "Search and book domestic and international flights.",
-            "image_url": "{% static 'images/services/Flight_Booking.jpg' %}"
+            "image_url": "images/services/Flight_Booking.jpg"
         },
         "accommodation": {
             "name": "Accommodation Booking",
             "category": "lodging",
             "description": "Find and book hotels, resorts, and other stays.",
-            "image_url": "{% static 'images/services/Accommodation_Booking.jpg' %}"
+            "image_url": "images/services/Accommodation_Booking.jpg"
         },
         "tour_packages": {
             "name": "Tour Packages",
             "category": "experiences",
             "description": "Plan guided tours and multi-day travel packages.",
-            "image_url": "{% static 'images/services/Tour_Packages.avif' %}"
+            "image_url": "images/services/Tour_Packages.avif"
         },
         "airport_transfers": {
             "name": "Airport Transfers",
             "category": "transportation",
             "description": "Arrange transport between airports and accommodations.",
-            "image_url": "{% static 'images/services/Airport_Transfers.webp' %}"
+            "image_url": "images/services/Airport_Transfers.webp"
         },
         "custom_itineraries": {
             "name": "Custom Itineraries",
             "category": "planning",
             "description": "Create personalized itineraries based on a traveler's interests and schedule.",
-            "image_url": "{% static 'images/services/Custom_Itineraries.jpg' %}"
+            "image_url": "images/services/Custom_Itineraries.jpg"
         },
         "group_travel": {
             "name": "Group Travel",
             "category": "planning",
             "description": "Coordinate travel arrangements for families, groups, and organizations.",
-            "image_url": "{% static 'images/services/Group_Travel.jpg' %}"
+            "image_url": "images/services/Group_Travel.jpg"
         }
     },
 
@@ -63,5 +63,20 @@
             "description": "Known for its iconic Opera House and beautiful harbor.",
             "image_url": "images/destinations/Sydney.webp"
         }
+    },
+    "contact_info": {
+        "email": "info@travelagency.com",
+        "phone": "+1-800-555-1234", 
+        "social_media": {
+            "facebook": "https://www.facebook.com/travelagency",
+            "twitter": "https://twitter.com/travelagency",
+            "instagram": "https://www.instagram.com/travelagency"
+        },
+        "office_hours": {
+            "monday_friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        },
+        "address": "123 Travel Lane, Wanderlust City, Country"
     }
-}
+}   

@@ -25,4 +25,7 @@ def our_process(request, *args, **kwargs):
     return render(request, 'process.html')
 
 def contact(request, *args, **kwargs):
-    return render(request, 'contact.html')
+    with (settings.BASE_DIR / 'data.json').open(encoding='utf-8') as data_file:
+        data = json.load(data_file)
+
+    return render(request, 'contact.html', {'contact_info': data['contact_info']})

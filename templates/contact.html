@@ -2,6 +2,73 @@
 {% load static %}
 
 {% block content %}
-    <h1>Contact Us</h1>
-    <p>Get in touch with us!</p>
+<section class="mx-auto max-w-6xl py-8">
+    <div class="mb-8 text-center">
+        <!-- <p class="mb-2 font-semibold uppercase tracking-widest text-primary">We're here to help</p> -->
+        <h1 class="text-4xl font-bold">Contact Us</h1>
+        <p class="mx-auto mt-3 max-w-2xl text-base-content/70">
+            Get in touch with our travel team. We’d be happy to help plan your next journey.
+        </p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-2">
+        <section class="card bg-base-100 shadow-sm" aria-labelledby="contact-details-heading">
+            <div class="card-body">
+                <h2 id="contact-details-heading" class="card-title mb-2 text-2xl">Get in touch</h2>
+
+                <div class="space-y-5">
+                    <div>
+                        <h3 class="font-semibold">Visit our office</h3>
+                        <address class="mt-1 not-italic text-base-content/70">{{ contact_info.address }}</address>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Email us</h3>
+                        <a class="link link-hover text-base-content/70" href="mailto:{{ contact_info.email }}">
+                            {{contact_info.email }}</a>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Call us</h3>
+                        <a class="link link-hover text-base-content/70" href="tel:{{ contact_info.phone }}">
+                            {{contact_info.phone }}</a>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 class="font-semibold">Office hours</h3>
+                <dl class="grid grid-cols-[1fr_auto] gap-x-4 gap-y-2 text-sm">
+                    <dt>Monday–Friday</dt>
+                    <dd>{{ contact_info.office_hours.monday_friday }}</dd>
+                    <dt>Saturday</dt>
+                    <dd>{{ contact_info.office_hours.saturday }}</dd>
+                    <dt>Sunday</dt>
+                    <dd>{{ contact_info.office_hours.sunday }}</dd>
+                </dl>
+
+                <div class="divider"></div>
+
+                <h3 class="font-semibold">Follow our travels</h3>
+                <div class="flex flex-wrap gap-3">
+                    <a class="btn btn-outline btn-sm" href="{{ contact_info.social_media.facebook }}" target="_blank"
+                        rel="noopener noreferrer">Facebook</a>
+                    <a class="btn btn-outline btn-sm" href="{{ contact_info.social_media.twitter }}" target="_blank"
+                        rel="noopener noreferrer">Twitter</a>
+                    <a class="btn btn-outline btn-sm" href="{{ contact_info.social_media.instagram }}" target="_blank"
+                        rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="card overflow-hidden bg-base-100 shadow-sm" aria-labelledby="location-heading">
+            <div class="card-body pb-3">
+                <h2 id="location-heading" class="card-title text-2xl">Find us</h2>
+                <p class="text-sm text-base-content/70">{{ contact_info.address }}</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73628.79589329068!2d-1.634637019328347!3d54.78172703433306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487c2aa525d8b1c1%3A0x678a46d5f522452b!2sDurham%2C%20UK!5e0!3m2!1sen!2sin!4v1791480730512!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
+    </div>
+</section>
 {% endblock %}

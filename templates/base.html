@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="site-header max-lg:collapse bg-base-200 shadow-sm w-full rounded-md px-4">
+    <div class="site-header max-lg:collapse bg-base-200 shadow-sm w-full rounded-md">
         <input id="navbar-1-toggle" class="peer hidden mobile-nav-toggle" type="checkbox" />
         <label for="navbar-1-toggle" class="fixed inset-0 hidden max-lg:peer-checked:block mobile-nav-overlay"></label>
         <div class="collapse-title navbar site-navbar">
@@ -26,18 +26,18 @@
                     </svg>
                 </label>
                 <a href="{% url 'home' %}">
-                    <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="mr-2" width="30" height="30">
+                    <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="mr-2" width="50" height="50">
 
                 </a>
             </div>
             <div class="navbar-center hidden lg:flex site-navbar-links">
-                <ul class="menu menu-horizontal px-1 primary-menu">
-                    <li><a href="{% url 'services' %}">Services</a></li>
+                <ul class="menu flex justify-between gap-4 menu-horizontal px-1 primary-menu">
+                    <li><a href="{% url 'services' %}" class="{% if request.path == '/services/' %}active-page{% endif %}">Services</a></li>
                     <li>
-                        <a href="{% url 'destinations' %}">Destinations</a>
+                        <a href="{% url 'destinations' %}" class="{% if request.path == '/destinations/' %}active-page{% endif %}">Destinations</a>
                     </li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-                    <li><a href="{% url 'our_process' %}">Our process</a></li>
+                    <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active-page{% endif %}">Contact</a></li>
+                    <li><a href="{% url 'our_process' %}" class="{% if request.path == '/our-process/' %}active-page{% endif %}">Our process</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -47,12 +47,12 @@
 
         <div class="collapse-content lg:hidden z-1 mobile-menu">
             <ul class="menu mobile-menu-links">
-                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'services' %}" class="{% if request.path == '/services/' %}active-page{% endif %}">Services</a></li>
                 <li>
-                    <a href="{% url 'destinations' %}">Destinations</a>
+                    <a href="{% url 'destinations' %}" class="{% if request.path == '/destinations/' %}active-page{% endif %}">Destinations</a>
                 </li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-                <li><a href="{% url 'our_process' %}">Our process</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active-page{% endif %}">Contact</a></li>
+                <li><a href="{% url 'our_process' %}" class="{% if request.path == '/our-process/' %}active-page{% endif %}">Our process</a></li>
             </ul>
         </div>
     </div>

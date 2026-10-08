@@ -2,6 +2,67 @@
 {% load static %}
 
 {% block content %}
-    <h1>Our Process</h1>
-    <p>Learn about our travel planning process!</p>
+<section class="mx-auto max-w-6xl py-8">
+    <header class="mb-10 text-center">
+        <!-- <p class="mb-2 font-semibold uppercase tracking-widest text-primary">Your trip, made simple</p> -->
+        <h1 class="text-4xl font-bold">How It Works</h1>
+        <p class="mx-auto mt-3 max-w-2xl text-base-content/70">
+            From choosing where to go to checking into your hotel, we’ll help you take care of each step.
+        </p>
+    </header>
+
+    <ol class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-label="Steps to plan your trip">
+        <li class="card bg-base-100 shadow-sm">
+            <div class="card-body">
+                <span class="badge badge-primary badge-lg">Step 1</span>
+                <h2 class="card-title mt-2">Tell us what you’re looking for</h2>
+                <p>Share your travel dates, interests, budget, and any special requirements with our team.</p>
+            </div>
+        </li>
+        <li class="card bg-base-100 shadow-sm">
+            <div class="card-body">
+                <span class="badge badge-primary badge-lg">Step 2</span>
+                <h2 class="card-title mt-2">Explore destinations</h2>
+                <p>Browse available destinations and work with us to choose the trip that suits you best.</p>
+                <div class="card-actions mt-auto pt-2">
+                    <a class="link link-primary" href="{% url 'destinations' %}">View destinations</a>
+                </div>
+            </div>
+        </li>
+        <li class="card bg-base-100 shadow-sm">
+            <div class="card-body">
+                <span class="badge badge-primary badge-lg">Step 3</span>
+                <h2 class="card-title mt-2">Plan your itinerary</h2>
+                <p>We’ll help shape your schedule, activities, and travel arrangements around your plans.</p>
+            </div>
+        </li>
+        <li class="card bg-base-100 shadow-sm">
+            <div class="card-body">
+                <span class="badge badge-primary badge-lg">Step 4</span>
+                <h2 class="card-title mt-2">Prepare for your visa</h2>
+                <p>Check the tourist visa requirements for your destination and get guidance on the application and supporting documents.</p>
+            </div>
+        </li>
+        <li class="card bg-base-100 shadow-sm">
+            <div class="card-body">
+                <span class="badge badge-primary badge-lg">Step 5</span>
+                <h2 class="card-title mt-2">Book your trip and hotel</h2>
+                <p>Once the details are settled, arrange your transport and choose accommodation for your stay.</p>
+                <div class="card-actions mt-auto pt-2">
+                    <a class="link link-primary" href="{% url 'services' %}">Explore our services</a>
+                </div>
+            </div>
+        </li>
+        <li class="card bg-base-100 shadow-sm">
+            <div class="card-body">
+                <span class="badge badge-primary badge-lg">Step 6</span>
+                <h2 class="card-title mt-2">Get ready to go</h2>
+                <p>Review your bookings and itinerary, pack your bags, and enjoy your journey. We’re here if you need help.</p>
+                <div class="card-actions mt-auto pt-2">
+                    <a class="link link-primary" href="{% url 'contact' %}">Get in touch</a>
+                </div>
+            </div>
+        </li>
+    </ol>
+</section>
 {% endblock %}
